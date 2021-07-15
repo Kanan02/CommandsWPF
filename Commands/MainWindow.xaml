@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:Commands"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.InputBindings>
+        <KeyBinding Key="R" Modifiers="Ctrl" Command="{Binding RedCommand}"></KeyBinding>
+        <KeyBinding Key="G" Modifiers="Ctrl" Command="{Binding GreenCommand}"></KeyBinding>
+        <KeyBinding Key="B" Modifiers="Ctrl" Command="{Binding BlueCommand}"></KeyBinding>
+        <KeyBinding Key="Y" Modifiers="Ctrl" Command="{Binding YellowCommand}"></KeyBinding>
+    </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
@@ -18,6 +24,7 @@
                 <MenuItem Command="{Binding RedCommand}" Header="Red"></MenuItem>
                 <MenuItem Command="{Binding GreenCommand}" Header="Green"></MenuItem>
                 <MenuItem Command="{Binding BlueCommand}" Header="Blue"></MenuItem>
+                <MenuItem Command="{Binding YellowCommand}" Header="Yellow"></MenuItem>
             </MenuItem>
         </Menu>
         <Grid Grid.Row="1" Background="{Binding SelectedColor}" >
@@ -28,10 +35,12 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Command="{Binding RedCommand}" Grid.Column="0" Content="Red"></Button>
             <Button Command="{Binding GreenCommand}" Grid.Column="1" Content="Green"></Button>
             <Button Command="{Binding BlueCommand}" Grid.Column="2" Content="Blue"></Button>
+            <Button Command="{Binding YellowCommand}" Grid.Column="3" Content="Yellow"></Button>
         </Grid>
 
 
